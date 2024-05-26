@@ -25,6 +25,7 @@ namespace MinApiLivros.Endpoints
             endpoints.MapGet("/livros", async (ILivroService _livroService) =>
                 TypedResults.Ok(await _livroService.GetLivros()))
                 .WithName("GetLivros")
+                .RequireAuthorization()
                 .WithOpenApi(x => new OpenApiOperation(x)
                 {
                     Summary = "Obtém todos os livros da biblioteca",
@@ -56,6 +57,7 @@ namespace MinApiLivros.Endpoints
                 return Results.Ok($"Livro de id={id} deletado");
             })
                 .WithName("DeleteLivroPorId")
+                .RequireAuthorization()
                 .WithOpenApi(x => new OpenApiOperation(x)
                 {
                     Summary = "Delete um livro pelo seu Id",

@@ -1,6 +1,6 @@
 {
   "ConnectionStrings": {
-    "DefaultConnection": "Server=152.67.39.113;DataBase=livros_db;Uid=user;Pwd=Xik6h1G40K"
+    "DefaultConnection": "Server=ip;DataBase=livros_db;Uid=user;Pwd=pass"
   },
   "Logging": {
     "LogLevel": {
